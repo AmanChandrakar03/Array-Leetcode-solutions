@@ -1,0 +1,14 @@
+class Solution {
+    public int[] plusOne(int[] digits) {
+        for(int i = digits.length-1;i>=0;i--){
+            if(digits[i]<9){ //if less than 9 then increment last  
+                digits[i]++; //and return 
+                return digits;
+            }
+            digits[i] = 0; //if 9 then set all to 0
+        }
+        digits = new int[digits.length+1]; //increase length by 1
+        digits[0] = 1; //set 0th to 1
+        return digits; 
+    }
+}
